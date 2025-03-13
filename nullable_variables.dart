@@ -5,9 +5,20 @@
 void main() {
   String? nami = 'nami'; // ? -> nami가 null일 수도
   nami = null;
-  // nami.length;
+
+  // 코드 1
   if (nami != null) {
     nami.isNotEmpty;
     print(nami.length);
   }
+
+  // 코드 2
+  nami?.isNotEmpty;  // nami가 null이면 null 반환
+  print(nami?.length);  // null 출력
+
+  // 코드 3
+  // null일 경우 대체값 제공
+  bool isNotEmpty = nami?.isNotEmpty ?? false;
+  // null일 경우 0 또는 다른 기본값 출력
+  print(nami?.length ?? 0);  
 }
