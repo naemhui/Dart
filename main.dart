@@ -9,4 +9,3 @@ void main() {
   String name_two = '나미';
   name_two = 'nami';
 }
-
